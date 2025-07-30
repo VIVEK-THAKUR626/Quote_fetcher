@@ -17,6 +17,9 @@
 h1,h3{
     font-family: 'UbuntuBold';
 }
+a{
+    text-decoration: none;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -39,7 +42,7 @@ h1,h3{
 }
 #content{
     min-width: 65vw;
-    max-height: 10em;
+    max-height: 2em;
     overflow: auto;
     background-color: rgb(83, 176, 160);
     padding: 3%;
@@ -49,6 +52,7 @@ h1,h3{
     font-weight: bold;
     font-family: 'Ubuntu';
     text-align: center;
+    margin-bottom: 0.2em;
 }
 #fetch{
     border-radius: 10px;
@@ -57,4 +61,8 @@ h1,h3{
     height: 3em;
     background-color: rgb(235, 181, 231);
     font-family: 'UbuntuBold';
+    transition: all ease 0.5s 0s;
+}
+button:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
 }
