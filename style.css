@@ -32,29 +32,29 @@ h1,h3{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 30vh;
+    height: 23vh;
 }
 .about{
     margin-bottom: 2em;
 }
 #content{
-    max-width: 20em;
+    min-width: 65vw;
     max-height: 10em;
+    overflow: auto;
     background-color: rgb(83, 176, 160);
     padding: 3%;
     border: 2.5px black solid;
     border-radius: 20px;
-    font-size: larger;
+    font-size: 1.3em;
     font-weight: bold;
     font-family: 'Ubuntu';
+    text-align: center;
 }
 #fetch{
-    padding: 1.25%;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-size: larger;
     width: 12em;
     height: 3em;
     background-color: rgb(235, 181, 231);
-    font-family: 'Ubuntu';
+    font-family: 'UbuntuBold';
 }
