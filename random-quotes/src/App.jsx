@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+import { useState , useEffect } from 'react'
 import './App.css'
 
 function Fetch_quotes(){
@@ -7,19 +7,20 @@ function Fetch_quotes(){
   const [buttonText, setButtonText] = useState("FETCH A QUOTE");
   const [author, setAuthor] = useState("VIVEK THAKUR");
 
-  // async function fetch() {
-  //   useEffect(()=>{
-  //     const reponse = await fetch("https://api-ninjas.com/api/quotes",
-  //       headers: {'X-Api-Key':}
-  //     )
-  //   })
-  // }
+  async function fetch_quote() {
+      const response = await fetch("https://api.api-ninjas.com/v1/quotes",{
+        headers: {'X-Api-Key': import.meta.env.VITE_API_KEY}}
+      );
+      const data = await response.json();
+      setQuote(data[0].quote);
+      setAuthor(data[0].author);
+  }
 
   return(
     <div className="flex flex-col justify-evenly border-white h-fit w-[35em] mt-[10em]">
       <p className="font-[monaco] text-gray-400">{quote}</p>
       <p className="font-[monaco] text-gray-400 self-end">- {author}</p>
-      <button className="font-[monaco] p-1.5 mt-10 bg-gray-300 w-fit text-sm">{buttonText}</button>
+      <button onClick={fetch_quote} className="font-[monaco] p-1.5 mt-10 bg-gray-300 w-fit text-sm">{buttonText}</button>
     </div>
   )
 }
