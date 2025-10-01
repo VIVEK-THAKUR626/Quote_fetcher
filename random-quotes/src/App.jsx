@@ -35,7 +35,6 @@ function Fetch_quotes(){
       const shareData = { text : quote };
       try{
         await navigator.share(shareData);
-        alert("Quote shared successfully");
       }
       catch{
         alert("Couldn't share the quote");
